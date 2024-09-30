@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amazon Virtual Assistant Portfolio showcasing services and case studies.">
+    <title>Muhammad Abdullah - Amazon Virtual Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #1a1a1a;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #3f3f3f;
+            color: #fff;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin-left: 20px;
+            font-size: 1.8em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        /* Responsive Navigation for Mobile */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                display: none;
+            }
+
+            nav.active ul {
+                display: flex;
+            }
+
+            nav h1 {
+                cursor: pointer;
+            }
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(20, 20, 20, 0.767), rgba(0, 0, 0, 0.7)), url('hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        #hero .btn {
+            padding: 12px 25px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        #hero .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Responsive Hero Section */
+        @media (max-width: 768px) {
+            #hero {
+                padding: 50px 0;
+            }
+
+            #hero h1 {
+                font-size: 2em;
+            }
+
+            #hero p {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Services Section */
+        #services {
+            padding: 50px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #services h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Responsive Service Cards */
+        @media (max-width: 768px) {
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Case Studies Section */
+        #case-studies {
+            padding: 50px 0;
+            background-color: #e9ecef;
+        }
+
+        #case-studies h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .case-study {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Case Studies */
+        @media (max-width: 768px) {
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Image Gallery Section */
+        #image-gallery {
+            padding: 50px 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #image-gallery h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            height: auto;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Image Gallery */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input, form textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #131313;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .social-media {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer .social-media a {
+            color: #fff;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        footer .social-media a:hover {
+            color: #e74c3c;
+        }
+
+        footer p {
+            margin-top: 15px;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            footer .social-media {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h1>Muhammad Abdullah</h1>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Amazon Virtual Assistant Services</h1>
+            <p>Optimize your business and maximize your Amazon sales with expert support.</p>
+            <a href="https://wa.me/+923347699801" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>My Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Product Research</h3>
+                    <p>Discover profitable products to sell on Amazon with thorough market research.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Listing Optimization</h3>
+                    <p>Boost your product visibility and sales with perfectly optimized listings.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Inventory Management</h3>
+                    <p>Efficiently manage your stock and prevent overselling or stockouts.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Amazon PPC (Pay-Per-Click)</h3>
+                    <p>Create, manage, and optimize PPC campaigns to drive targeted traffic and improve ROI.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Amazon Storefront Creation</h3>
+                    <p>Design and set up an attractive Amazon Storefront for your brand.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Review & Feedback Management</h3>
+                    <p>Monitor and manage customer reviews and feedback. Handle negative reviews to maintain a positive seller reputation.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Amazon SEO Optimization</h3>
+                    <p>Improve product listings to rank higher organically on Amazon search.Increase visibility and sales with SEO best practices.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Customer Service Management</h3>
+                    <p>Handle customer inquiries, resolve complaints, and manage refunds/returns.Focus on delivering excellent customer experiences and boosting reviews.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies">
+        <div class="container">
+            <h2>Client Projects</h2>
+            <div class="case-studies-grid">
+                <div class="case-study">
+                    <h3>Client 1 - Increased Sales by 150%</h3>
+                    <p>Detailed case study about boosting client sales through product optimization and strategic advertising.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Client 2 - Launched Successful Amazon Store</h3>
+                    <p>Helped the client launch a new Amazon store, achieving rapid growth within the first quarter.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Client 3 - Inventory Turnover Rate Improvement</h3>
+                    <p>Managed inventory effectively to improve turnover rates and reduce dead stock.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Client 4 - Struggling with low conversion rates and high cart abandonment.</h3>
+                    <p>Decreased cart abandonment by 25% and boosted overall conversion rates by 15% within 1 month.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Client 5 - Inventory management issues, resulting in frequent stockouts.</h3>
+                    <p>Reduced stockouts by 70%, ensuring constant product availability and a 20% increase in sales.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Client 6 - Low visibility in Amazon search results and poor organic traffic.</h3>
+                    <p>Organic search ranking improved significantly, increasing traffic by 50% and revenue by 30% in 3 months.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Client 7 - Ineffective advertising strategies leading to high ACOS (Advertising Cost of Sales).</h3>
+                    <p>Reduced ACOS by 40% while maintaining ad spend, resulting in a 25% increase in ad-generated sales.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Client 8 - Poor customer reviews and ratings, affecting overall product performance.</h3>
+                    <p>Improved product ratings by 1.5 stars on average and increased positive reviews by 40%, leading to higher conversion rates.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Client 9 - Inconsistent brand presentation across Amazon listings, leading to brand dilution.</h3>
+                    <p>Increased brand recognition, leading to a 35% increase in repeat customers over a 6-month period.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section id="image-gallery">
+        <div class="container">
+            <h2>Project Screenshots</h2>
+            <div class="gallery-grid">
+                <img src="img/blakbox.jpg" alt="Client Project 1 Screenshot">
+                <img src="img/pcc-acos.jpg" alt="Client Project 2 Screenshot">
+                <img src="img/pcc-list.jpg" alt="Client Project 3 Screenshot">
+                <img src="img/ppc.jpg" alt="Client Project 4 Screenshot">
+                <img src="img/wholesale-profit-1.jpg" alt="Client Project 5 Screenshot">
+                <img src="img/wholesale.jpg" alt="Client Project 6 Screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="social-media">
+                <li><a href="https://web.facebook.com/profile.php?id=61556099505943" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/mrabdullah1433?igsh=MWMycXRxcmMzOTBrZQ==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/+923347699801" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/muhammad-abdullah-9993b82b9/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+
+            </ul>
+            <p>&copy; 2024 Muhammad Abdullah. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const navToggle = document.querySelector('nav h1');
+        const navMenu = document.querySelector('nav ul');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
