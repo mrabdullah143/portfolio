@@ -21,6 +21,11 @@
             background-color: #f4f4f4;
             color: #1a1a1a;
         }
+        /* body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eaeaea; /* Light background for contrast */
+            padding: 20px; /* Padding around the container */
+        } */
 
         .container {
             width: 90%;
@@ -304,9 +309,110 @@
         /* Responsive Footer */
         @media (max-width: 768px) {
             footer .social-media {
-                flex-direction: column;
+                flex-direction: column; /* Stacks social media items vertically on smaller screens */
             }
         }
+
+        .reviews-container { 
+            padding: 50px 0; /* Add padding for top and bottom */
+            background-color: #e9ecef; /* Background color for contrast */
+            display: grid; /* Use a grid layout for reviews */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid for gallery style */
+            gap: 20px; /* Space between grid items */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        .review-box {
+            background-color: #fff; /* Background color */
+            padding: 20px; /* Inner padding */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+            min-height: 150px; /* Minimum height for uniformity */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        /* Optional hover effect */
+        .review-box:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .reviews-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust columns for smaller screens */
+            }
+}
+
+        .review-box:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+        }
+
+        .review-header {
+            display: flex; /* Flex layout for header */
+            align-items: center; /* Center items vertically */
+            margin-bottom: 10px; /* Space below the header */
+        }
+
+        .client-photo {
+            width: 40px; /* Smaller client photo size */
+            height: 40px; /* Smaller client photo size */
+            border-radius: 50%; /* Circular photo */
+            margin-right: 10px; /* Space between photo and name */
+            border: 2px solid #007BFF; /* Border around client photo */
+            transition: transform 0.3s; /* Transition for photo hover effect */
+        }
+
+        .client-photo:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
+        .client-info {
+            flex-grow: 1; /* Allow the client info to take available space */
+        }
+
+        .client-info h3 {
+            margin: 0; /* Remove default margin */
+            font-size: 1.5em; /* Adjusted font size */
+            color: #333; /* Dark text color for contrast */
+        }
+
+        .client-title {
+            font-size: 0.8em; /* Smaller font size for the title */
+            color: #777; /* Lighter color for the title */
+        }
+
+        .review-text {
+            text-align: left; /* Align text to the left */
+            font-size: 1.0em; /* Adjusted font size for review text */
+            color: #444; /* Darker text for readability */
+            line-height: 1.4; /* Line height for better readability */
+            margin-top: 5px; /* Space above review text */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .reviews-container {
+                grid-template-columns: 1fr; /* Stack reviews in a single column on small screens */
+            }
+
+            .review-box {
+                min-height: 120px; /* Reduced minimum height for mobile */
+                padding: 10px; /* Reduced padding for mobile */
+            }
+
+            .client-photo {
+                width: 35px; /* Smaller client photo for mobile */
+                height: 35px; /* Smaller client photo for mobile */
+            }
+
+            .review-text {
+                font-size: 0.75em; /* Smaller font size for review text on mobile */
+            }
+        }
+
     </style>
 </head>
 
@@ -319,14 +425,14 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://wa.me/+923347699801">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero">
         <div class="container">
-            <h1>Amazon Virtual Assistant Services</h1>
+            <h1>Portfolio of Abdullah - Amazon Virtual Assistant</h1>
             <p>Optimize your business and maximize your Amazon sales with expert support.</p>
             <a href="https://wa.me/+923347699801" class="btn">Contact Me</a>
         </div>
@@ -335,7 +441,7 @@
     <!-- Services Section -->
     <section id="services">
         <div class="container">
-            <h2>My Services</h2>
+            <h2>Skills</h2>
             <div class="service-cards">
                 <div class="service-card">
                     <h3>Product Research</h3>
@@ -376,7 +482,7 @@
     <!-- Case Studies Section -->
     <section id="case-studies">
         <div class="container">
-            <h2>Client Projects</h2>
+            <h2>Projects</h2>
             <div class="case-studies-grid">
                 <div class="case-study">
                     <h3>Client 1 - Increased Sales by 150%</h3>
@@ -421,14 +527,71 @@
     <!-- Image Gallery Section -->
     <section id="image-gallery">
         <div class="container">
-            <h2>Project Screenshots</h2>
-            <div class="gallery-grid">
-                <img src="img/blakbox.jpg" alt="Client Project 1 Screenshot">
-                <img src="img/pcc-acos.jpg" alt="Client Project 2 Screenshot">
-                <img src="img/pcc-list.jpg" alt="Client Project 3 Screenshot">
-                <img src="img/ppc.jpg" alt="Client Project 4 Screenshot">
-                <img src="img/wholesale-profit-1.jpg" alt="Client Project 5 Screenshot">
-                <img src="img/wholesale.jpg" alt="Client Project 6 Screenshot">
+            <h2>Client Reviews</h2>
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="img/client-roas.png" alt="Client Photo 1" class="client-photo">
+                    <div class="client-info">
+                        <h3>David</h3>
+                        <span class="client-title">Amazon Seller</span>
+                    </div>
+                </div>
+                <p class="review-text">"Muhammad has completely transformed my Amazon business. From optimizing product listings to managing PPC campaigns, his expertise has driven a 35% sales increase. He isn’t just about implementing changes; he brings a strategic mindset that considers long-term growth. His attention to detail and in-depth knowledge of Amazon’s platform made me feel confident in the process. He’s also very communicative, making sure I was informed at every step. If you’re serious about growing your Amazon business, Muhammad is the partner you need. Highly recommended!"</p>
+            </div>
+        
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="img/listing-optimization.jpg" alt="Client Photo 2" class="client-photo">
+                    <div class="client-info">
+                        <h3>Richard</h3>
+                        <span class="client-title">Amazon Seller</span>
+                    </div>
+                </div>
+                <p class="review-text">"Hiring Muhammad was the best move for my Amazon store. He took over key areas like inventory management, customer service, and PPC, allowing me to focus on scaling my business. Within just a few months, I saw sales double, and my operations run smoother. His professionalism and commitment to delivering results are unmatched. Muhammad’s approach isn’t just tactical but also tailored specifically to my business needs, which has been a game-changer. I couldn’t be happier with his service and the results."</p>
+            </div>
+        
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="img/product-hunting.jpg" alt="Client Photo 3" class="client-photo">
+                    <div class="client-info">
+                        <h3>Thomas</h3>
+                        <span class="client-title">Amazon Seller</span>
+                    </div>
+                </div>
+                <p class="review-text">"Muhammad's expertise has been invaluable to my business. He completely revamped my product listings, boosting visibility and driving significant sales growth. His understanding of Amazon’s algorithms ensures that I stay compliant while maximizing performance. He’s detail-oriented and very easy to work with. Not only did he optimize my listings, but his recommendations for PPC and promotions added real value to my business. Muhammad goes above and beyond, and I’d recommend him to anyone looking for a serious advantage in the Amazon marketplace."</p>
+            </div>
+        
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="img/product-listing.jpg" alt="Client Photo 4" class="client-photo">
+                    <div class="client-info">
+                        <h3>Carlo Alberto</h3>
+                        <span class="client-title">Amazon Seller</span>
+                    </div>
+                </div>
+                <p class="review-text">"Muhammad has been a tremendous asset to my business. He optimized my product listings and developed a PPC strategy that reduced my ACOS by half while doubling my sales. On top of that, he actively monitored customer feedback, turning potential negative reviews into positive ones, which significantly boosted my seller rating. I now maintain a 4.9-star average and have seen continued growth in sales. Muhammad’s dedication to delivering results and ensuring customer satisfaction is evident in everything he does. I highly recommend his services."</p>
+            </div>
+        
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="img/product-ppc.jpg" alt="Client Photo 5" class="client-photo">
+                    <div class="client-info">
+                        <h3>Andrea Billato</h3>
+                        <span class="client-title">Amazon Seller</span>
+                    </div>
+                </div>
+                <p class="review-text">"Muhammad helped elevate my premium skincare brand on Amazon. With his professional storefront design and optimized listings, my sales increased by 45% in just three months. His deep understanding of FBA and advertising strategies has been instrumental in improving both visibility and conversions. His work speaks for itself, and I’m beyond impressed with the results he’s delivered. I’ve worked with other service providers, but none have been as thorough or as committed to driving real results as Muhammad. I couldn’t ask for a better partner."</p>
+            </div>
+        
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="img/product-research.jpg" alt="Client Photo 6" class="client-photo">
+                    <div class="client-info">
+                        <h3>Niko Vijverberg</h3>
+                        <span class="client-title">Amazon Seller</span>
+                    </div>
+                </div>
+                <p class="review-text">"Working with Muhammad has been a game-changer for my business. He handled everything from customer inquiries to product returns, allowing me to focus on growth. His strategy for managing reviews has significantly increased positive feedback, improving my overall seller metrics. Since partnering with Muhammad, I’ve seen steady sales growth and a noticeable improvement in customer satisfaction. His ability to handle day-to-day operations with ease has allowed me to scale my business faster than I could have anticipated. I highly recommend his services to any serious Amazon seller"</p>
             </div>
         </div>
     </section>
