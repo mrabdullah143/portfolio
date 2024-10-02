@@ -33,6 +33,12 @@
             margin: 0 auto;
             padding: 20px 0;
         }
+        .containers {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
 
         /* Navigation */
         nav {
@@ -411,6 +417,120 @@
             .review-text {
                 font-size: 0.75em; /* Smaller font size for review text on mobile */
             }
+            /* <!-- CSS for Styling the Comment Box --> */
+            #comment-box {
+                background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+                padding: 40px;
+                margin-top: 50px;
+                border-radius: 12px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 30px;
+                color: #333;
+            }
+
+            .comment-form {
+                width: 100%;
+            }
+
+            .form-group {
+                position: relative;
+                margin-bottom: 25px;
+            }
+
+            .form-group input, 
+            .form-group textarea {
+                width: 100%;
+                padding: 15px 10px;
+                border: none;
+                border-radius: 8px;
+                background: #fff;
+                font-size: 16px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: box-shadow 0.3s ease;
+                resize: none;
+            }
+
+            .form-group input:focus, 
+            .form-group textarea:focus {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                outline: none;
+            }
+
+            .form-group input:focus + .form-label,
+            .form-group textarea:focus + .form-label {
+                transform: translateY(-30px);
+                font-size: 12px;
+                color: #007bff;
+            }
+
+            .form-label {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                font-size: 16px;
+                transition: all 0.3s ease;
+                color: #666;
+                pointer-events: none;
+            }
+
+            .form-group input:not(:placeholder-shown) + .form-label,
+            .form-group textarea:not(:placeholder-shown) + .form-label {
+                transform: translateY(-30px);
+                font-size: 12px;
+                color: #007bff;
+            }
+
+            .submit-btn {
+                width: 100%;
+                padding: 15px;
+                background: linear-gradient(135deg, #007bff, #00d4ff);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .submit-btn:hover {
+                background: linear-gradient(135deg, #0056b3, #00a3cc);
+            }
+
+            #thanks-message {
+                text-align: center;
+                margin-top: 20px;
+                font-size: 18px;
+                color: #333;
+            }
+
+            #thanks-message a {
+                color: #007bff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            #thanks-message a:hover {
+                text-decoration: underline;
+            }
+
         }
 
     </style>
@@ -425,6 +545,7 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#image-gallery">Testimonials</a></li>
             <li><a href="https://wa.me/+923347699801">Contact</a></li>
         </ul>
     </nav>
@@ -487,6 +608,22 @@
         </div>
     </section>
 
+    <!-- Work Experience -->
+    <section id="image-gallery">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="client-info">
+                        <h3>Amazon Virtual Assistant | Muhammad Abdullah</h3>
+                    </div>
+                </div>
+                <p class="review-text">"As an Amazon Virtual Assistant with over 2 years of experience, I specialize in managing diverse seller accounts and optimizing product listings. I have successfully handled more than 32 accounts, increasing sales by up to 45% and reducing ACoS by 40%. My skills in PPC campaign management, inventory control, and keyword research ensure maximum product visibility and profitability. Additionally, I have launched new products that quickly became Amazon's Choice within months. With a strong grasp of e-commerce tools and trends, I am committed to helping businesses thrive in the competitive Amazon marketplace."</p>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Case Studies Section -->
     <section id="case-studies">
         <div class="container">
@@ -543,6 +680,100 @@
             </div>
         </div>
     </section>
+
+    <!-- Testimonials -->
+    <section id="image-gallery">
+        <div class="container">
+            <h2>Testimonials</h2>
+            
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="client-info">
+                        <h3>Amazon Seller | Richard</h3>
+                    </div>
+                </div>
+                <p class="review-text">"Working with Abdullah was a transformative experience for our business. His expertise in Amazon Seller Central and keen attention to detail helped boost our sales within just a few months. Abdullah optimized our product listings, improved our PPC campaigns, and provided valuable insights into inventory management. The results were immediate, and we saw a significant increase in sales and product visibility. His professionalism and dedication made a noticeable difference, and we are incredibly grateful for his contribution to our success."</p>
+            </div>
+
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="client-info">
+                        <h3>Amazon Seller | Jones</h3>
+                    </div>
+                </div>
+                <p class="review-text">"Hiring Muhammad was the best move for my Amazon store. He took over key areas like inventory management, customer service, and PPC, allowing me to focus on scaling my business. Within just a few months, I saw sales double, and my operations run smoother. His professionalism and commitment to delivering results are unmatched. Muhammad’s approach isn’t just tactical but also tailored specifically to my business needs, which has been a game-changer. I couldn’t be happier with his service and the results."</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Certifications/Training</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Amazon Virtual Assistant Certification</h3>
+                    <p>Expertly manage your Amazon seller account, optimize product listings, handle inventory, and execute effective marketing strategies to boost sales and streamline operations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Google Cloud Digital Leader - Udemy</h3>
+                    <p>Gain essential skills to drive digital transformation, manage cloud solutions, and leverage Google Cloud tools to enhance business operations and innovation.</p>
+                </div>
+                <div class="service-card">
+                    <h3>T-Shirt Design Pro - Udemy</h3>
+                    <p>Master t-shirt design essentials with Adobe Illustrator, creating professional, eye-catching designs using vector graphics, typography, and bold colors—perfect for beginners and those seeking to enhance their skills.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Facebook & Instagram Ads - Udemy</h3>
+                    <p>Master t-shirt design essentials with Adobe Illustrator, creating professional, eye-catching designs using vector graphics, typography, and bold colors—perfect for beginners and those seeking to enhance their skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Tools & Software Proficiency</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Helium 10</h3>
+                    <p>A comprehensive suite offering tools for product research, keyword optimization, and listing management, helping sellers maximize visibility and sales on Amazon.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Jungle Scout</h3>
+                    <p>A powerful research tool designed to identify profitable products, analyze competition, and track sales data, enabling sellers to make informed decisions in the Amazon marketplace.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AMZ Tracker</h3>
+                    <p>Provides advanced tracking and optimization features for Amazon listings, including keyword tracking, review monitoring, and competitor analysis to improve visibility and sales performance.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Keepa</h3>
+                    <p>Price tracking tool that provides historical price data, sales rank, and product availability information, helping sellers analyze market trends and make data-driven pricing decisions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>SellerBoard</h3>
+                    <p>Profit analytics software specifically for Amazon sellers, offering real-time tracking of profits, expenses, and key performance metrics to optimize business operations and financial health.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Amazon Seller Central</h3>
+                    <p>The primary platform for managing Amazon seller accounts, allowing users to create listings, manage inventory, and analyze sales performance and customer feedback.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Google Analytics</h3>
+                    <p>A web analytics service that tracks and reports website traffic, helping sellers understand user behavior and optimize their online presence.</p>
+                </div>
+                <div class="service-card"> <!-- Removed the misplaced closing tag -->
+                    <h3>Amazon FBA Calculator</h3>
+                    <p>FBA Calculator shows Amazon fees, sales margins, revenue, and product net profit and is free to use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Image Gallery Section -->
     <section id="image-gallery">
