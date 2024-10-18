@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Amazon Virtual Assistant Portfolio showcasing services and case studies.">
     <title>Muhammad Abdullah - Amazon Virtual Assistant</title>
+
+        <!-- Favicon Links -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="img/logoweb.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="img/favicon-256x256.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512x512.png">
     
-    <!-- Favicon Links -->
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logo/logoweb-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logo/logoweb-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/logo/logoweb-96x96.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/logo/logoweb-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="img/logo/logoweb-512x512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/logo/logoweb-180x180.png">
-    
+    <!-- -------------------------------------- -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     
@@ -26,16 +26,33 @@
             box-sizing: border-box;
         }
 
+        .circular-icon {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Keep the height equal to the width for a perfect circle */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image covers the entire area */
+        }
+
+
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #121212;
+            color: #f0f0f0;
         }
         /* body {
             font-family: 'Arial', sans-serif;
-            background-color: #eaeaea; /* Light background for contrast */
+            background-color: #1b1b1b; /* Light background for contrast */
             padding: 20px; /* Padding around the container */
         } */
+
+        /* <!-- Header with Logo --> */
+        <header>
+            <div class="logo">
+                <a href="https://yourwebsite.com">
+                    <img src="path_to_logo/logo.png" alt="Muhammad Abdullah - Amazon Virtual Assistant" style="width:150px; height:auto;">
+                </a>
+            </div>
+        </header>
 
         .container {
             width: 90%;
@@ -152,7 +169,7 @@
         /* Services Section */
         #services {
             padding: 50px 0;
-            background-color: #fff;
+            background-color: #383838;
             text-align: center;
         }
 
@@ -168,7 +185,7 @@
         }
 
         .service-card {
-            background-color: #f9f9f9;
+            background-color: #3b3b3b;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -193,7 +210,7 @@
         /* Case Studies Section */
         #case-studies {
             padding: 50px 0;
-            background-color: #e9ecef;
+            background-color: #333333;
         }
 
         #case-studies h2 {
@@ -209,7 +226,7 @@
         }
 
         .case-study {
-            background-color: #fff;
+            background-color: #383838;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -225,7 +242,7 @@
         /* Image Gallery Section */
         #image-gallery {
             padding: 50px 0;
-            background-color: #f4f4f4;
+            background-color: #3a3a3a;
             text-align: center;
         }
 
@@ -263,7 +280,7 @@
         /* Contact Section */
         #contact {
             padding: 50px 0;
-            background-color: #fff;
+            background-color: #383838;
         }
 
         form {
@@ -276,7 +293,7 @@
         form input, form textarea {
             margin-bottom: 20px;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #666;
             border-radius: 5px;
         }
 
@@ -309,13 +326,13 @@
         }
 
         footer .social-media a {
-            color: #3498db;
+            color: #62b0e8;
             font-size: 1.75em;
             transition: color 0.3s;
         }
 
         footer .social-media a:hover {
-            color: #2980b9;
+            color: #5398c8;
         }
 
         footer p {
@@ -331,7 +348,7 @@
 
         .reviews-container { 
             padding: 50px 0; /* Add padding for top and bottom */
-            background-color: #e9ecef; /* Background color for contrast */
+            background-color: #333333; /* Background color for contrast */
             display: grid; /* Use a grid layout for reviews */
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid for gallery style */
             gap: 20px; /* Space between grid items */
@@ -339,7 +356,7 @@
         }
 
         .review-box {
-            background-color: #fff; /* Background color */
+            background-color: #383838; /* Background color */
             padding: 20px; /* Inner padding */
             border-radius: 5px; /* Rounded corners */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
@@ -392,18 +409,18 @@
         .client-info h3 {
             margin: 0; /* Remove default margin */
             font-size: 1.5em; /* Adjusted font size */
-            color: #333; /* Dark text color for contrast */
+            color: #f0f0f0; /* Dark text color for contrast */
         }
 
         .client-title {
             font-size: 0.8em; /* Smaller font size for the title */
-            color: #777; /* Lighter color for the title */
+            color: #d0d0d0; /* Lighter color for the title */
         }
 
         .review-text {
             text-align: left; /* Align text to the left */
             font-size: 1.0em; /* Adjusted font size for review text */
-            color: #444; /* Darker text for readability */
+            color: #e0e0e0; /* Darker text for readability */
             line-height: 1.4; /* Line height for better readability */
             margin-top: 5px; /* Space above review text */
         }
@@ -450,7 +467,7 @@
                 font-weight: bold;
                 text-align: center;
                 margin-bottom: 30px;
-                color: #333;
+                color: #f0f0f0;
             }
 
             .comment-form {
@@ -468,7 +485,7 @@
                 padding: 15px 10px;
                 border: none;
                 border-radius: 8px;
-                background: #fff;
+                background: #3b3b3b;
                 font-size: 16px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 transition: box-shadow 0.3s ease;
@@ -495,7 +512,7 @@
                 transform: translateY(-50%);
                 font-size: 16px;
                 transition: all 0.3s ease;
-                color: #666;
+                color: #cccccc;
                 pointer-events: none;
             }
 
@@ -528,7 +545,7 @@
                 text-align: center;
                 margin-top: 20px;
                 font-size: 18px;
-                color: #333;
+                color: #f0f0f0;
             }
 
             #thanks-message a {
@@ -544,20 +561,20 @@
         }
 
         #pricing {
-            background-color: #f9f9f9;
+            background-color: #3b3b3b;
             padding: 60px 0;
             text-align: center;
         }
 
         #pricing h2 {
             font-size: 36px;
-            color: #333;
+            color: #f0f0f0;
             margin-bottom: 20px;
         }
 
         #pricing p {
             font-size: 18px;
-            color: #666;
+            color: #cccccc;
             margin-bottom: 40px;
         }
 
@@ -571,8 +588,8 @@
 
         /* Individual Pricing Card Styling */
         .pricing-card {
-            background-color: white;
-            border: 1px solid #ddd;
+            background-color: #383838;
+            border: 1px solid #555;
             border-radius: 8px;
             padding: 30px;
             max-width: 300px;
@@ -586,7 +603,7 @@
 
         .pricing-card h3 {
             font-size: 24px;
-            color: #333;
+            color: #f0f0f0;
             margin-bottom: 15px;
         }
 
@@ -605,7 +622,7 @@
 
         .pricing-card ul li {
             font-size: 16px;
-            color: #555;
+            color: #bbbbbb;
             margin-bottom: 10px;
         }
 
@@ -625,6 +642,8 @@
         }
 
     </style>
+
+
 </head>
 
 <body>
@@ -650,7 +669,6 @@
             <a href="https://wa.me/+923347699801" class="btn">Contact Me</a>
         </div>
     </section>
-    
 
     <!-- Services Section -->
     <section id="services">
@@ -1012,7 +1030,7 @@
                         <li>Basic customer support</li>
                         <li>Inventory management & listing updates</li>
                     </ul>
-                    <a href="https://wa.me/+923347699801" class="btn">Start My Journey</a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B923347699801&text=Hello%2C%20I%20would%20like%20more%20information%207-days%20plain&type=phone_number&app_absent=0" class="btn">Start My Journey</a>
                 </div>
 
                 <!-- 15-Day Plan -->
@@ -1025,7 +1043,7 @@
                         <li>Customer feedback & review handling</li>
                         <li>Seller Central account maintenance</li>
                     </ul>
-                    <a href="https://wa.me/+923347699801" class="btn">Unlock My Potential</a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B923347699801&text=Hello%2C%20I%20would%20like%20more%20information%2015-days%20plain&type=phone_number&app_absent=0" class="btn">Unlock My Potential</a>
                 </div>
 
                 <!-- 30-Day Plan -->
@@ -1038,7 +1056,7 @@
                         <li>Product launch strategies</li>
                         <li>Competitor analysis & sales tracking</li>
                     </ul>
-                    <a href="https://wa.me/+923347699801" class="btn">Boost My Sales Today!</a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B923347699801&text=Hello%2C%20I%20would%20like%20more%20information%2030-days%20plain&type=phone_number&app_absent=0" class="btn">Boost My Sales Today!</a>
                 </div>
             </div>
         </div>
