@@ -120,15 +120,22 @@
             }
         }
 
+
+        
         /* Hero Section */
-        #hero {
+        /* #hero {
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('img/pexels-shattha-pilabut-38930-135620.jpg') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 100px 0;
             transition: background-image 1s ease-in-out; /* Smooth transition between images */
             height: 100vh; /* Full screen height */
-        }
+        } */
+
+
+
+
+
         #hero h1 {
             font-size: 4em;
             margin-bottom: 10px;
@@ -649,19 +656,30 @@
 </head>
 
 
-
+<!-------- BACKGROUND -------------------------------------->
+<style>
+    /* CSS for the hero section with background image transition */
+    #hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('img/pexels-shattha-pilabut-38930-135620.jpg') no-repeat center center/cover;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+        transition: background-image 1s ease-in-out; /* Smooth transition between images */
+        height: 100vh; /* Full screen height */
+    }
+</style>
 
 <script>
     // JavaScript for auto-changing background images
     const hero = document.getElementById('hero');
     const images = [
         'img/pexels-shattha-pilabut-38930-135620.jpg', // Original image
-        'img/back1.jpg',    // Add your second image path here
-        'img/back2.jpg',     // Add your third image path here
-        'img/back3.jpg'     // Add your fourth image path here
-        'img/back4.jpg',     // Add your third image path here
-        'img/back5.jpg'     // Add your fourth image path here
-        'img/back6.jpg',     // Add your third image path here
+        'img/back1.jpg',    // Second image
+        'img/back2.jpg',    // Third image
+        'img/back3.jpg',    // Fourth image
+        'img/back4.jpg',    // Fifth image
+        'img/back5.jpg',    // Sixth image
+        'img/back6.jpg'     // Seventh image
     ];
     let currentImage = 0;
 
@@ -673,6 +691,7 @@
     // Change image every 5 seconds (5000 milliseconds)
     setInterval(changeBackgroundImage, 5000);
 </script>
+
 
 
 
