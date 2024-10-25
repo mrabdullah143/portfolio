@@ -7,17 +7,63 @@
     <meta name="description" content="Amazon Virtual Assistant Portfolio showcasing services and case studies.">
     <title>Muhammad Abdullah - Amazon Virtual Assistant</title>
 
-        <!-- Favicon Links -->
+    <!-- Favicon Links -->
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="icon" type="image/png" href="img/logoweb.png">
     <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="256x256" href="img/favicon-256x256.png">
     <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512x512.png">
     
-    <!-- -------------------------------------- -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    
+
+    <!-- BACKGROUND STYLE -->
+    <style>
+        /* CSS for the hero section without inline background image */
+        #hero {
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            height: 100vh;
+            transition: background-image 1s ease-in-out; /* Smooth transition between images */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+    <script>
+        // JavaScript for auto-changing background images
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.getElementById('hero');
+            const images = [
+                'img/pexels-shattha-pilabut-38930-135620.jpg', // Original image
+                'img/back1.jpg',    // Second image
+                'img/back2.jpg',    // Third image
+                'img/back3.jpg',    // Fourth image
+                'img/back4.jpg',    // Fifth image
+                'img/back5.jpg',    // Sixth image
+                'img/back6.jpg'     // Seventh image
+            ];
+            let currentImage = 0;
+
+            function changeBackgroundImage() {
+                hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('${images[currentImage]}')`;
+                currentImage = (currentImage + 1) % images.length;  // Cycle through images
+            }
+
+            // Initial background image
+            changeBackgroundImage();
+            // Change image every 5 seconds (5000 milliseconds)
+            setInterval(changeBackgroundImage, 5000);
+        });
+    </script>
+</head>
+
+
+
+
+
+
     <style>
         /* General Styles */
         * {
@@ -121,7 +167,7 @@
         }
 
 
-        
+
         /* Hero Section */
         /* #hero {
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('img/pexels-shattha-pilabut-38930-135620.jpg') no-repeat center center/cover;
@@ -655,42 +701,6 @@
 
 </head>
 
-
-<!-------- BACKGROUND -------------------------------------->
-<style>
-    /* CSS for the hero section with background image transition */
-    #hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('img/pexels-shattha-pilabut-38930-135620.jpg') no-repeat center center/cover;
-        color: #fff;
-        text-align: center;
-        padding: 100px 0;
-        transition: background-image 1s ease-in-out; /* Smooth transition between images */
-        height: 100vh; /* Full screen height */
-    }
-</style>
-
-<script>
-    // JavaScript for auto-changing background images
-    const hero = document.getElementById('hero');
-    const images = [
-        'img/pexels-shattha-pilabut-38930-135620.jpg', // Original image
-        'img/back1.jpg',    // Second image
-        'img/back2.jpg',    // Third image
-        'img/back3.jpg',    // Fourth image
-        'img/back4.jpg',    // Fifth image
-        'img/back5.jpg',    // Sixth image
-        'img/back6.jpg'     // Seventh image
-    ];
-    let currentImage = 0;
-
-    function changeBackgroundImage() {
-        hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('${images[currentImage]}')`;
-        currentImage = (currentImage + 1) % images.length;  // Cycle through images
-    }
-
-    // Change image every 5 seconds (5000 milliseconds)
-    setInterval(changeBackgroundImage, 5000);
-</script>
 
 
 
