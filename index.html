@@ -48,11 +48,12 @@
         /* <!-- Header with Logo --> */
         <header>
             <div class="logo">
-                <a href="https://yourwebsite.com">
-                    <img src="path_to_logo/logo.png" alt="Muhammad Abdullah - Amazon Virtual Assistant" style="width:150px; height:auto;">
-                </a>
+               <a href="https://mrabdullah143.github.io/portfolio/">
+                    <img src="img/profile.jpg" alt="Muhammad Abdullah - Amazon Virtual Assistant" style="width:150px; height:auto; border-radius:50%;">
+                 </a>
             </div>
         </header>
+
 
         .container {
             width: 90%;
@@ -125,8 +126,9 @@
             color: #fff;
             text-align: center;
             padding: 100px 0;
+            transition: background-image 1s ease-in-out; /* Smooth transition between images */
+            height: 100vh; /* Full screen height */
         }
-
         #hero h1 {
             font-size: 4em;
             margin-bottom: 10px;
@@ -646,6 +648,35 @@
 
 </head>
 
+
+
+
+<script>
+    // JavaScript for auto-changing background images
+    const hero = document.getElementById('hero');
+    const images = [
+        'img/pexels-shattha-pilabut-38930-135620.jpg', // Original image
+        'img/back1.jpg',    // Add your second image path here
+        'img/back2.jpg',     // Add your third image path here
+        'img/back3.jpg'     // Add your fourth image path here
+        'img/back4.jpg',     // Add your third image path here
+        'img/back5.jpg'     // Add your fourth image path here
+        'img/back6.jpg',     // Add your third image path here
+    ];
+    let currentImage = 0;
+
+    function changeBackgroundImage() {
+        hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('${images[currentImage]}')`;
+        currentImage = (currentImage + 1) % images.length;  // Cycle through images
+    }
+
+    // Change image every 5 seconds (5000 milliseconds)
+    setInterval(changeBackgroundImage, 5000);
+</script>
+
+
+
+
 <body>
 
     <!-- Navigation -->
@@ -677,15 +708,15 @@
             <div class="service-cards">
                 <div class="service-card">
                     <h3>Product Research</h3>
-                    <p>Discover profitable products to sell on Amazon with thorough market research.</p>
+                    <p>Identify profitable Amazon products through in-depth market research, ensuring high demand, low competition, and optimal sales potential.</p>
                 </div>
                 <div class="service-card">
                     <h3>Listing Optimization</h3>
-                    <p>Boost your product visibility and sales with perfectly optimized listings.</p>
+                    <p>Enhance product visibility and drive sales with expertly optimized listings tailored for maximum engagement and conversions.</p>
                 </div>
                 <div class="service-card">
                     <h3>Inventory Management</h3>
-                    <p>Efficiently manage your stock and prevent overselling or stockouts.</p>
+                    <p>"Effectively manage inventory to prevent overselling or stockouts, ensuring smooth operations and consistent product availability.</p>
                 </div>
                 <div class="service-card">
                     <h3>Amazon PPC (Pay-Per-Click)</h3>
@@ -697,11 +728,11 @@
                 </div>
                 <div class="service-card">
                     <h3>Review & Feedback Management</h3>
-                    <p>Monitor and manage customer reviews and feedback. Handle negative reviews to maintain a positive seller reputation.</p>
+                    <p>Manage customer reviews and feedback by promptly addressing negative comments, ensuring a positive seller reputation while building trust and loyalty with your customers.</p>
                 </div>
                 <div class="service-card">
                     <h3>Amazon SEO Optimization</h3>
-                    <p>Improve product listings to rank higher organically on Amazon search.Increase visibility and sales with SEO best practices.</p>
+                    <p>Enhance product listings to achieve higher organic rankings on Amazon search, boosting visibility and sales through effective SEO best practices and strategies.</p>
                 </div>
                 <div class="service-card">
                     <h3>Competitor Analysis</h3>
@@ -719,7 +750,7 @@
         </div>
     </section>
 
-    <!-- Work Experience -->
+    <!-------------------- Work Experience ------------------------------------>
     <section id="image-gallery">
         <div class="container">
             <h2>Experience</h2>
@@ -731,11 +762,30 @@
                 </div>
                 <p class="review-text">"As an Amazon Virtual Assistant with over 2 years of experience, I specialize in managing diverse seller accounts and optimizing product listings. I have successfully handled more than 32 accounts, increasing sales by up to 45% and reducing ACoS by 40%. My skills in PPC campaign management, inventory control, and keyword research ensure maximum product visibility and profitability. Additionally, I have launched new products that quickly became Amazon's Choice within months. With a strong grasp of e-commerce tools and trends, I am committed to helping businesses thrive in the competitive Amazon marketplace."</p>
             </div>
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="client-info">
+                        <h3>E-commerce Specialist (Shopify Dropshipping & Amazon Wholesale) | Muhammad Abdullah</h3>
+                    </div>
+                </div>
+                <p class="review-text">"With a strong foundation in e-commerce, I have extensive experience in managing Shopify dropshipping stores and executing Amazon wholesale strategies. I am skilled in sourcing high-demand products, negotiating with suppliers, and optimizing listings for maximum visibility and profitability. My expertise includes creating conversion-focused Shopify stores, handling product listings, and developing seamless order fulfillment processes. On Amazon, I focus on achieving the Buy Box through strategic pricing, inventory management, and leveraging Amazon’s tools to drive sales growth. Together, these e-commerce experiences allow me to build profitable businesses from the ground up, maximizing reach and ensuring consistent revenue streams."</p>
+            </div>
+            <div class="review-box">
+                <div class="review-header">
+                    <div class="client-info">
+                        <h3>Digital Marketing & Social Media Expert (Lead Gen, YouTube SEO, TikTok & Facebook Ads) | Muhammad Abdullah</h3>
+                    </div>
+                </div>
+                <p class="review-text">"As a digital marketing specialist, I excel in creating targeted campaigns across YouTube, TikTok, and Facebook, leveraging SEO and audience insights to improve engagement and conversions. My YouTube SEO strategies enhance video visibility through optimized keywords, tags, and descriptions, leading to channel growth and higher viewer retention. On TikTok and Facebook, I craft high-impact ads, utilizing detailed audience segmentation and A/B testing to achieve high click-through rates and conversions. Additionally, I have a proven track record in lead generation and social media management, building engaging online communities and capturing qualified leads to drive business growth."</p>
+            </div>
         </div>
     </section>
 
 
-    <!-- Case Studies Section -->
+   
+
+
+    <!--------------- Case Studies Section ------------------------------>
     <section id="case-studies">
         <div class="container">
             <h2>Projects</h2>
@@ -828,15 +878,23 @@
                     <p>Expertly manage your Amazon seller account, optimize product listings, handle inventory, and execute effective marketing strategies to boost sales and streamline operations.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Google Cloud Digital Leader - Udemy</h3>
-                    <p>Gain essential skills to drive digital transformation, manage cloud solutions, and leverage Google Cloud tools to enhance business operations and innovation.</p>
+                    <h3>Amazon Wholesale - Certification</h3>
+                    <p>I specialize in Amazon wholesale, sourcing competitive products, managing inventory, optimizing listings, and using data analytics. My skills in negotiation and relationship-building drive profitability and ensure compliance with Amazon policies.</p>
                 </div>
                 <div class="service-card">
-                    <h3>T-Shirt Design Pro - Udemy</h3>
-                    <p>Master t-shirt design essentials with Adobe Illustrator, creating professional, eye-catching designs using vector graphics, typography, and bold colors—perfect for beginners and those seeking to enhance their skills.</p>
+                    <h3>Shopify Dropshipping - Certification</h3>
+                    <p>I excel in Shopify dropshipping, focusing on product research, supplier negotiation, and optimizing online storefronts. My skills in marketing and data analysis drive sales while ensuring efficient inventory management and customer satisfaction.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Facebook & Instagram Ads - Udemy</h3>
+                    <h3>Facebook & Instagram Ads - Certification</h3>
+                    <p>I specialize in Facebook and Instagram ads, creating targeted campaigns that maximize reach and engagement. My skills in audience analysis, ad optimization, and performance tracking drive conversions and enhance brand visibility.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Google Cloud Digital Leader - Certification</h3>
+                    <p>As a Google Cloud Digital Leader, I guide organizations in leveraging cloud solutions. My skills include cloud strategy development, optimizing workflows, ensuring data security, and driving innovation to enhance business performance.</p>
+                </div>
+                <div class="service-card">
+                    <h3>T-Shirt Design Pro - Certification</h3>
                     <p>Master t-shirt design essentials with Adobe Illustrator, creating professional, eye-catching designs using vector graphics, typography, and bold colors—perfect for beginners and those seeking to enhance their skills.</p>
                 </div>
             </div>
